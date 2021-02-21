@@ -1,0 +1,25 @@
+{
+  "name": "algo_rhythm",
+  "version": "1.0.0",
+  "description": "For algorithm training, like daily rhythm",
+  "main": "al1.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timetaxy/algo_rhythm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timetaxy/algo_rhythm/issues"
+  },
+  "homepage": "https://github.com/timetaxy/algo_rhythm#readme",
+  "devDependencies": {
+    "jest": "^27.4.3",
+    "node-mocks-http": "^1.11.0",
+    "supertest": "^6.1.6"
+  }
+}
