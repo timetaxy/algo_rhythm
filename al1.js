@@ -1,9 +1,11 @@
 exports.solve = (input) => {
-  if (input.length > 80) return;
-  if (typeof input != "string") return;
-  for (const iterator of input) {
-    console.log(iterator);
-  }
+  console.log("it is! asdfasdfasdfasdfasfasdfasd");
+  return 123;
+  // if (input.length > 80) return;
+  // if (typeof input != "string") return;
+  // for (const iterator of input) {
+  //   console.log(iterator);
+  // }
   // let result = 0;
 
   // switch (input) {

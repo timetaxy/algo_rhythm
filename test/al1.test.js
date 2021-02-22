@@ -12,12 +12,11 @@ const input = [
 
 const output = [null, 10, 9, 7, 55, 30];
 
-al1.solve = jest.fn();
-
-beforeEach(() => {
-  al1.solve.mockReset();
-});
-describe("al1 test created", () => {
+describe("al1 pretest created", () => {
+  al1.solve = jest.fn();
+  beforeEach(() => {
+    // al1.solve.mockReset();
+  });
   it("should be function", () => {
     expect(typeof al1.solve).toBe("function");
   });
@@ -27,21 +26,33 @@ describe("al1 test created", () => {
     expect(al1.solve).toHaveBeenCalled();
   });
 
-  it("should be return proper result using mock", () => {
-    al1.solve.mockReturnValue(output);
+  it("should be called with proper args", () => {
+    al1.solve(input);
+    expect(al1.solve).toBeCalledWith(input);
+  });
 
+  it("should be return proper result using mock", () => {
+    // al1.solve.mockReturnValue(output);
+    al1.solve.mockReturnValueOnce(output);
     const res = al1.solve(input);
-    console.log(`res:${res}`);
+    // console.log(`res:${res}`);
     expect(res).toEqual(output);
     // mock.mockReset();
     // al1.solve.mockReset();
     // expect(res._getJSONData).toStrictEqual(output._getJSONData);
   });
+});
 
+describe("al1 test created", () => {
   it("should be return proper result", () => {
     const res = al1.solve(input);
     console.log(`res:${res}`);
     expect(res).toEqual(output);
   });
 });
-// ref:https://jestjs.io/docs/expect
+
+// ref:
+// https://jestjs.io/docs/expect
+// https://zakelstorm.tistory.com/53
+// https://crmrelease.tistory.com/104
+// https://www.daleseo.com/jest-fn-spy-on/
