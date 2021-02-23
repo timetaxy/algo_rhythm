@@ -13,7 +13,6 @@ const input = [
 const output = [null, 10, 9, 7, 55, 30];
 
 describe("al1 pretest created", () => {
-  al1.solve = jest.fn();
   beforeEach(() => {
     // al1.solve.mockReset();
   });
@@ -27,11 +26,21 @@ describe("al1 pretest created", () => {
   });
 
   it("should be called with proper args", () => {
+    al1.solve = jest.fn();
+
     al1.solve(input);
     expect(al1.solve).toBeCalledWith(input);
   });
 
+  it("should be called with proper args testing with spying", () => {
+    const spy = jest.spyOn(al1, "solve");
+
+    al1.solve(input);
+    expect(spy).toBeCalledWith(input);
+  });
+
   it("should be return proper result using mock", () => {
+    al1.solve = jest.fn();
     // al1.solve.mockReturnValue(output);
     al1.solve.mockReturnValueOnce(output);
     const res = al1.solve(input);
