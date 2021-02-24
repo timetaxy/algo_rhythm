@@ -10,7 +10,7 @@ const input = [
   "OOOOXOOOOXOOOOX",
 ];
 
-const output = [null, 10, 9, 7, 55, 30];
+const output = [10, 9, 7, 55, 30];
 
 describe("al1 pretest created", () => {
   beforeEach(() => {
@@ -52,7 +52,7 @@ describe("al1 pretest created", () => {
   });
 });
 
-describe("al1 test created", () => {
+describe("test for proper answer checking", () => {
   it("should be return proper result", () => {
     const res = al1.solve(input);
     console.log(`res:${res}`);
