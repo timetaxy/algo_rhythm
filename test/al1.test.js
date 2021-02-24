@@ -1,6 +1,6 @@
 `use strict`;
 const { expect } = require("@jest/globals");
-const al1 = require("../al1");
+const al1 = require("../b8958/al1");
 const input = [
   "5",
   "OOXXOXXOOO",
