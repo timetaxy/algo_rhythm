@@ -21,6 +21,7 @@ describe("al1 pretest created", () => {
   });
 
   it("should be called proper function", () => {
+    al1.solve = jest.fn();
     al1.solve(input);
     expect(al1.solve).toHaveBeenCalled();
   });
