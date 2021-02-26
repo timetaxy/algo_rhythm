@@ -34,6 +34,31 @@ describe("pretest created", () => {
     al2.solve();
     expect(al2.solve).toHaveBeenCalled();
   });
+
+  it("it should be return proper output", () => {
+    al2.solve = jest.fn();
+    al2.solve.mockReturnValue(output);
+    const ret = al2.solve(input);
+    expect(ret).toBe(output);
+  });
 });
 
-describe("test for solve", (input) => {});
+describe("test for solve", (input) => {
+  it("should be return proper result", (input) => {
+    // jest.setTimeout(600000);
+    // const ret = al2.solve(input);
+    // const ret = output;
+    // expect(ret).toStrictEqual(output);
+    //time out
+    // expect(ret).toBe(output);
+    // console.log(output);
+    // expect(output).toEqual(output);
+    // expect(1).toBe(1); //fail
+    // expect("1").toEqual("1"); //success
+    //ref
+    //https://stackoverflow.com/questions/22413009/jasmine-javascript-testing-tobe-vs-toequal
+    // toBe : ref object, toEqual : ref value
+    //https://github.com/jasmine/jasmine/issues/786
+    // always arr compare fail
+  });
+});

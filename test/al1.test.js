@@ -14,7 +14,10 @@ const output = [10, 9, 7, 55, 30];
 
 describe("al1 pretest created", () => {
   beforeEach(() => {
-    // al1.solve.mockReset();
+    al1.solve = jest.fn();
+  });
+  afterEach(() => {
+    al1.solve.mockReset();
   });
   it("should be function", () => {
     expect(typeof al1.solve).toBe("function");
@@ -41,7 +44,7 @@ describe("al1 pretest created", () => {
   });
 
   it("should be return proper result using mock", () => {
-    al1.solve = jest.fn();
+    // al1.solve = jest.fn();
     // al1.solve.mockReturnValue(output);
     al1.solve.mockReturnValueOnce(output);
     const res = al1.solve(input);
@@ -66,3 +69,4 @@ describe("test for proper answer checking", () => {
 // https://zakelstorm.tistory.com/53
 // https://crmrelease.tistory.com/104
 // https://www.daleseo.com/jest-fn-spy-on/
+// https://gitlab.com/jinwoo-kim/training-jwkim/-/wikis/jasmine-usage
