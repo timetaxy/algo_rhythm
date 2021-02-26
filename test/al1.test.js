@@ -69,4 +69,5 @@ describe("test for proper answer checking", () => {
 // https://zakelstorm.tistory.com/53
 // https://crmrelease.tistory.com/104
 // https://www.daleseo.com/jest-fn-spy-on/
+// https://www.daleseo.com/jest-basic/
 // https://gitlab.com/jinwoo-kim/training-jwkim/-/wikis/jasmine-usage

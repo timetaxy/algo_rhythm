@@ -11,42 +11,50 @@ const input = [
 
 const output = ["40.000%", "57.143%", "33.333%", "66.667%", "55.556%"];
 
-describe("pretest created", () => {
-  beforeEach(() => {});
-  it("it should be function", () => {
-    // console.log("test");
-    expect(typeof al2.solve).toBe("function");
-  });
+// describe("pretest created", () => {
+//   beforeEach(() => {
+//     al2.solve = jest.fn();
+//   });
+//   afterEach(() => {
+//     al2.solve.mockReset();
+//   });
+//   it("it should be function", () => {
+//     // console.log("test");
+//     expect(typeof al2.solve).toBe("function");
+//   });
 
-  it("it should not be some object", () => {
-    // console.log("test");
-    expect(typeof al2.solve).not.toBe("object");
-  });
+//   it("it should not be some object", () => {
+//     // console.log("test");
+//     expect(typeof al2.solve).not.toBe("object");
+//   });
 
-  it("it should be called", () => {
-    const spy = jest.spyOn(al2, "solve");
-    al2.solve();
-    expect(spy).toBeCalled();
-  });
+//   it("it should be called", () => {
+//     const spy = jest.spyOn(al2, "solve");
+//     al2.solve();
+//     expect(spy).toBeCalled();
+//   });
 
-  it("it should be called check without spy", () => {
-    al2.solve = jest.fn();
-    al2.solve();
-    expect(al2.solve).toHaveBeenCalled();
-  });
+//   it("it should be called check without spy", () => {
+//     // al2.solve = jest.fn();
+//     al2.solve();
+//     expect(al2.solve).toHaveBeenCalled();
+//   });
 
-  it("it should be return proper output", () => {
-    al2.solve = jest.fn();
-    al2.solve.mockReturnValue(output);
-    const ret = al2.solve(input);
-    expect(ret).toBe(output);
-  });
-});
+//   it("it should be return proper output", () => {
+//     // al2.solve = jest.fn();
+//     al2.solve.mockReturnValue(output);
+//     const ret = al2.solve(input);
+//     expect(ret).toBe(output);
+//   });
+// });
 
-describe("test for solve", (input) => {
-  it("should be return proper result", (input) => {
+describe("test for solve", () => {
+  it("should be return proper result", () => {
+    // console.log(input);
+    // expect(input).toEqual(input);
     // jest.setTimeout(600000);
-    // const ret = al2.solve(input);
+    const ret = al2.solve(input);
+    expect(ret).toEqual(output);
     // const ret = output;
     // expect(ret).toStrictEqual(output);
     //time out
@@ -54,7 +62,7 @@ describe("test for solve", (input) => {
     // console.log(output);
     // expect(output).toEqual(output);
     // expect(1).toBe(1); //fail
-    // expect("1").toEqual("1"); //success
+    // expect(1).toEqual(1); //fail?
     //ref
     //https://stackoverflow.com/questions/22413009/jasmine-javascript-testing-tobe-vs-toequal
     // toBe : ref object, toEqual : ref value
