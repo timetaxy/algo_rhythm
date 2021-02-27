@@ -43,3 +43,6 @@ exports.solve = (input) => {
   //   const output = ["40.000%", "57.143%", "33.333%", "66.667%", "55.556%"];
   //   return output;
 };
+
+//ref
+//https://ko.javascript.info/number
