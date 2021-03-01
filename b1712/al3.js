@@ -24,6 +24,16 @@ exports.solve = (x) => {
     return ret;
   };
 
+  const asyncProcessing = async (x, y, cb) => {
+    new Promise((res, rej) => {
+      for (let index = x; index < y; index++) {
+        console.log(`now asyncProcessing x:${x}, y:${y}`);
+        let ret = cb(x);
+        if (ret !== null) res(ret);
+      }
+    });
+  };
+
   let result = [];
   for (const iterator of x) {
     result.push(singleSolve(iterator));
